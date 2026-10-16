@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آرين سولار - Arin Solar</title>
+
+    <!-- خط Tajawal المميز -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <!-- مكتبة الأيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- مكتبة عرض الصور Fancybox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+    <!-- ملف التنسيق الخاص بنا -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. الشريط العلوي (Navbar) -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-solar-panel"></i>
+            <span>آرين سولار | Arin Solar</span>
+        </div>
+        <div class="nav-links">
+            <a href="#home">الرئيسية</a>
+            <a href="#services">خدماتنا</a>
+            <a href="#features">لماذا تختارنا؟</a>
+            <a href="#pricing">أسعارنا</a>
+            <a href="#location">أين تجدنا</a>
+        </div>
+    </nav>
+
+    <div class="container" id="home">
+        <!-- العنوان الرئيسي -->
+        <header class="main-header">
+            <h1>آرين سولار لخدمات صيانة ونظافة المنظومات الشمسية</h1>
+            <p class="subtitle">نوفر لك أحدث حلول الصيانة والنظافة والتأهيل لضمان أقصى كفاءة لمنظومتك الشمسية</p>
+        </header>
+
+        <!-- شبكة أزرار الخدمات (Cards Grid) -->
+        <div class="services-grid" id="services">
+            
+            <div class="service-card">
+                <div class="service-title">صيانة الانفرتر</div>
+            </div>
+<!-- بطاقة نظافة الخلايا مع المعاينة -->
+<div class="service-card has-preview">
+    <div class="price-ribbon">15 جنيه للوح</div>
+    <div class="service-title">نظافة الخلايا</div>
+    
+    <!-- صندوق معاينة صور نظافة الخلايا -->
+    <div class="preview-box">
+        <a href="solar-panel.jpeg" data-fancybox="gallery-panels" data-caption="نظافة الخلايا - صورة 1">
+            <img src="solar-panel.jpeg" alt="نظافة الخلايا 1">
+        </a>
+        <a href="solar-panel1.jpeg" data-fancybox="gallery-panels" data-caption="نظافة الخلايا - صورة 2">
+            <img src="solar-panel1.jpeg" alt="نظافة الخلايا 2">
+        </a>
+    </div>
+</div>
+
+            <div class="service-card">
+                <div class="service-title">صيانة الكابلات</div>
+            </div>
+
+            <div class="service-card has-preview">
+                <div class="service-title">صيانة الشاسيهات</div>
+                
+                <!-- صندوق معاينة الصور عند الوقوف على الخدمة (لأسفل) -->
+                <div class="preview-box">
+                    <a href="structure0.jpeg" data-fancybox="gallery-structure" data-caption="صيانة الشاسيهات - قبل التعديل">
+                        <img src="structure0.jpeg" alt="قبل التعديل">
+                    </a>
+                    <a href="structure.jpeg" data-fancybox="gallery-structure" data-caption="صيانة الشاسيهات - بعد التعديل">
+                        <img src="structure.jpeg" alt="بعد التعديل">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- عبارة التوعية والحفاظ على المنظومة -->
+        <div class="notice-box">
+            <p><i class="fa-solid fa-circle-exclamation"></i> لا تهدر أموالك.. اهتم بمنظومتك وحافظ عليها لتستمر بأعلى كفاءة.</p>
+        </div>
+
+        <!-- 2. قسم لماذا تختارنا؟ (مميزاتنا) -->
+        <section class="features-section" id="features">
+            <h2 class="section-title">لماذا تختار آرين سولار؟</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-user-gear"></i></div>
+                    <h3>خبرة احترافية</h3>
+                    <p>فنيون ومهندسون متخصصون في فحص ونظافة وصيانة جميع المكونات الشمسية بدقة عالية.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>سرعة في التنفيذ</h3>
+                    <p>استجابة سريعة ومعالجة فورية للأعطال لتفادي توقف توليد الكهرباء.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-award"></i></div>
+                    <h3>ضمان وجودة</h3>
+                    <p>نستخدم أحدث معدات الفحص وقطع الغيار الأصلية مع ضمان على الخدمة.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. قسم أسعارنا وميزتنا التنافسية -->
+        <section class="pricing-section" id="pricing">
+            <h2 class="section-title">أسعارنا ومنافستنا في السوق</h2>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <div class="pricing-icon"><i class="fa-solid fa-tags"></i></div>
+                    <h3>أسعار تنافسية مدروسة</h3>
+                    <p>نحرص على تقديم أعدل الأسعار في السوق مع الحفاظ على أعلى مستويات الدقة والجودة في التنفيذ.</p>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                    <h3>عقود صيانة ونظافة دورية</h3>
+                    <p>باقات توفير مخصصة للمزارع والمحطات التجارية والمنازل تشمل فحصاً ونظافة دورية بأسعار مخفضة.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. قسم أين تجدنا وعناوين الخدمة -->
+        <section class="location-section" id="location">
+            <h2 class="section-title">أين تجدنا ومناطق التغطية</h2>
+            <div class="location-cards">
+                <div class="location-card">
+                    <i class="fa-solid fa-location-dot location-icon"></i>
+                    <h3>نطاق الخدمة والتغطية</h3>
+                    <p>الواحات البحرية - الباويطي (وجميع المواقع والمزارع المجاورة)</p>
+                </div>
+                <div class="location-card">
+                    <i class="fa-solid fa-clock location-icon"></i>
+                    <h3>مواعيد العمل</h3>
+                    <p>من الأحد إلى الخميس: 8:00 صباحاً – 5:00 مساءً<br>جاهزون للاستشارات والمعاينات الميدانية.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- تذييل الصفحة Footer مع إضافة معلومات الاتصال والباويطي -->
+    <footer class="footer">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+            <p>جميع الحقوق محفوظة © 2026 - آرين سولار (Arin Solar) لخدمات الطاقة الشمسية</p>
+            <p style="font-size: 0.95rem; color: #f1c40f; font-weight: bold;">
+                <i class="fa-solid fa-location-dot"></i> الواحات البحرية - الباويطي | 
+                <i class="fa-solid fa-phone"></i> <a href="tel:01024986214" style="color: #fff; text-decoration: none;">01024986214</a> | 
+                <i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/201024986214" target="_blank" style="color: #25d366; text-decoration: none;">واتساب</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- مكتبة التشغيل والتقليب بين الصور (Fancybox JS) -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+        Fancybox.bind("[data-fancybox]", {});
+    </script>
+    <script>
+        // 1. منع زر الفأرة الأيمن (Right Click) تماماً لمنع حفظ الصور أو فتح Inspect
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    
+        // 2. منع اختصارات لوحة المفاتيح الشهيرة للسرقة (F12, Ctrl+U لعرض الكود، Ctrl+Shift+I، Ctrl+S للحفظ)
+        document.addEventListener('keydown', function(e) {
+            if (
+                e.key === 'F12' || 
+                (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) || 
+                (e.ctrlKey && (e.key === 'U' || e.key === 's'))
+            ) {
+                e.preventDefault();
+                alert('هذا المحتوى محمي بواسطة آرين سولار.');
+                return false;
+            }
+        });
+    
+        // 3. منع سحب وإفلات الصور (Drag and Drop) عشان محدش يسحب الصورة على جهازه
+        document.addEventListener('dragstart', function(e) {
+            if (e.target.nodeName === 'IMG') {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

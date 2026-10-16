@@ -1,0 +1,375 @@
+/* ضبط الخط الأساسي للصفحة والخلفية */
+body {
+    font-family: 'Tajawal', sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('solar-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    text-align: center;
+    color: #ffffff;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* 1. الشريط العلوي Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #2a9d8f;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar .logo i {
+    font-size: 1.5rem;
+}
+
+.navbar .nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 25px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    transition: color 0.2s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #2a9d8f;
+}
+
+/* حاوية الصفحة المنسقة */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* العنوان والعنوان الفرعي */
+.main-header h1 {
+    font-size: 2.3rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.main-header .subtitle {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+/* شبكة عرض الخدمات */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 90px;
+}
+
+/* شكل بطاقة الخدمة (Card) */
+.service-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.92);
+    color: #1a252c;
+    padding: 22px 15px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.15rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border-bottom: 4px solid #2a9d8f;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-3px);
+    background: #ffffff;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+    border-bottom-color: #e76f51;
+}
+
+/* تخصيص الكارت الذي يحتوي على الشريط المائل لقص الأطراف فقط دون غيره */
+.featured-card {
+    overflow: hidden;
+}
+
+/* الشريط المائل بالسعر */
+.price-ribbon {
+    position: absolute;
+    top: 12px;
+    left: -32px;
+    background: #e76f51;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 4px 30px;
+    transform: rotate(-35deg);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.5px;
+}
+
+/* صندوق معاينة الصور لأسفل */
+/* إظهار صندوق المعاينة عند الوقوف بالماوس بأعلى دقة */
+.service-card.has-preview {
+    position: relative;
+}
+
+.service-card.has-preview .preview-box {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    z-index: 1000;
+    gap: 10px;
+}
+
+.service-card.has-preview:hover .preview-box {
+    display: flex !important;
+}
+
+.preview-box a {
+    display: block;
+    width: 80px;
+    height: 60px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.preview-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* صندوق التنبيه */
+.notice-box {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    border-right: 4px solid #2a9d8f;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+
+.notice-box p {
+    margin: 0;
+    font-size: 1.05rem;
+    color: #f1f1f1;
+}
+
+/* 2. قسم لماذا تختارنا؟ */
+.features-section {
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 25px 20px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.feature-icon {
+    font-size: 2.2rem;
+    color: #2a9d8f;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 1.25rem;
+    margin: 0 0 10px 0;
+    color: #ffffff;
+}
+
+.feature-card p {
+    font-size: 0.95rem;
+    color: #d0d0d0;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* 3. قسم أسعارنا وميزتنا التنافسية */
+.pricing-section {
+    margin-bottom: 60px;
+}
+
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.pricing-card {
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 4px solid #e76f51;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+}
+
+.pricing-icon {
+    font-size: 2.2rem;
+    color: #e76f51;
+    margin-bottom: 15px;
+}
+
+.pricing-card h3 {
+    font-size: 1.2rem;
+    margin: 0 0 10px 0;
+}
+
+.pricing-card p {
+    color: #d0d0d0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* 4. قسم أين تجدنا */
+.location-section {
+    margin-bottom: 60px;
+}
+
+.location-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.location-card {
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 4px solid #2a9d8f;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.location-icon {
+    font-size: 2.2rem;
+    color: #2a9d8f;
+    margin-bottom: 15px;
+}
+
+.location-card h3 {
+    font-size: 1.2rem;
+    margin: 0 0 10px 0;
+}
+
+.location-card p {
+    color: #d0d0d0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* تذييل الصفحة Footer */
+.footer {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 18px 0;
+    font-size: 0.95rem;
+    color: #a0a0a0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+/* صندوق معاينة الصور الموحد لجميع الكروت */
+.service-card {
+    position: relative;
+}
+
+/* حل نهائي لمنع أي قص للصناديق الخارجية */
+.services-grid {
+    overflow: visible !important;
+}
+
+.service-card .preview-box {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    gap: 10px;
+}
+
+.service-card:hover .preview-box {
+    display: flex !important;
+}
+
+.preview-box::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+}
+
+.preview-box a {
+    display: block;
+    width: 70px;
+    height: 50px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.preview-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
